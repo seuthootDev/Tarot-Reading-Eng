@@ -592,6 +592,19 @@ export default function ZodiacSpreadReading({ selectedCards }: { selectedCards: 
         </button>
       </div>
 
+      {/* Add touch instruction */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="text-center mb-8"
+      >
+        <p className="text-purple-300 text-sm">
+          <span className="inline-block animate-bounce mr-2">👆</span>
+          Touch a card to see its detailed meaning
+        </p>
+      </motion.div>
+
       {/* 선택된 카드의 의미 */}
       {selectedCardIndex !== null && flippedCards.includes(selectedCardIndex) && (
         <motion.div
